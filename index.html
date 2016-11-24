@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Open and close module</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Open and close module</h1>
+    <p><a href="https://github.com/russmaxdesign/open-close">Github Page</a></p>
+
+    <p>This open-close toggle uses a checkbox to allow users to reveal or hide
+    additional content. Could be used to reveal content such as terms and
+    conditions or detailed informatio associated with success/warning/error
+    messages.</p>
+
+    <h2>Example</h2>
+    <div class="message message--info">
+      <input id="message-1" type="checkbox">
+      <label for="message-1">Read full Terms and Cnditions</label>
+      <div class="message__content">
+        <div class="message__inner">
+          Lorem ipsum dolor sit amet consect etuer adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+        </div>
+      </div>
+    </div>
+
+    <div class="message message--success">
+      <input id="message-2" type="checkbox">
+      <label for="message-2"><b>Success</b>: Your form has been submitted</label>
+      <div class="message__content">
+        <div class="message__inner">
+          Lorem ipsum dolor sit amet consect etuer adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut.
+        </div>
+      </div>
+    </div>
+
+    <div class="message message--warning">
+      <input id="message-3" type="checkbox">
+      <label for="message-3"><b>Warning</b>: Your form needs to be saved before the next step</label>
+      <div class="message__content">
+        <div class="message__inner">
+          Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+
+    <div class="message message--error">
+      <input id="message-4" type="checkbox">
+      <label for="message-4"><b>Error</b>: Your form was not submitted correctly at this time</label>
+      <div class="message__content">
+        <div class="message__inner">
+          Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <h2>Code</h2>
+    <figure>
+      <figcaption class="markup-heading">Markup</figcaption>
+      <pre><code class="language-markup">&lt;div class="message message--info"&gt;
+  &lt;input id="message-1" type="checkbox"&gt;
+  &lt;label for="message-1"&gt;Read full Terms and Cnditions&lt;/label&gt;
+  &lt;div class="message__content"&gt;
+    &lt;div class="message__inner"&gt;
+      Lorem ipsum...
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </figure>
+    <hr>
+
+    <p><a href="https://github.com/russmaxdesign/open-close">Github Page</a></p>
+  </div>
+
+<script src="assets/js/prism.js"></script>
+</body>
+</html>

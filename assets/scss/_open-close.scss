@@ -1,0 +1,170 @@
+// variables
+
+$space-base: 20px;
+$black: #000;
+$lime: #92bf43;
+$yellow-dark: #ff9837;
+$red: #dc0000;
+$gray-light: #efefef;
+$product-focus: #666;
+$text-color: #333;
+
+
+// message
+
+.message {
+  position: relative;
+  border-left: 4px solid $lime;
+  margin: 0 0 1em;
+  padding: ($space-base * .75) $space-base ($space-base * .75) ($space-base * .5);
+  background-color: $gray-light;
+}
+
+.message--info {
+  border-left: 4px solid darken($gray-light, 20%);
+}
+
+.message--success {
+  border-left: 4px solid $lime;
+}
+
+.message--warning {
+  border-left: 4px solid $yellow-dark;
+}
+
+.message--error {
+  border-left: 4px solid $red;
+}
+
+
+// input
+
+.message input {
+  float: left;
+  width: $space-base;
+  opacity: 1;
+}
+
+.message input:focus {
+  outline: none;
+}
+
+
+// :after
+
+.message input:after {
+  position: absolute;
+  top: 13px;
+  left: 7px;
+  width: $space-base;
+  height: $space-base;
+  content: '';
+  background: url(../img/closed.gif) no-repeat;
+}
+
+.message--info input:after {
+  background-color: darken($gray-light, 40%);
+}
+
+.message--success input:after {
+  background-color: $lime;
+}
+
+.message--warning input:after {
+  background-color: $yellow-dark;
+}
+
+.message--error input:after {
+  background-color: $red;
+}
+
+
+// hover
+
+.message--success input:hover:after {
+  background-color: darken($gray-light, 20%);
+}
+
+.message--success input:hover:after {
+  background-color: darken($lime, 20%);
+}
+
+.message--warning input:hover:after {
+  background-color: darken($yellow-dark, 20%);
+}
+
+.message--error input:hover:after {
+  background-color: darken($red, 15%);
+}
+
+
+// hover label
+
+.message--info input:hover + label,
+.message--success input:hover + label,
+.message--warning input:hover + label,
+.message--error input:hover + label {
+  color: black;
+}
+
+
+// focus after
+
+.message input:focus:after {
+  background-color: $black;
+  outline: 5px auto #85bffd;
+}
+
+
+// focus label
+
+.message input:focus + label {
+  color: darken($lime, 30%);
+}
+
+
+// checked after
+
+.message input:checked:after {
+  background: url(../img/open.gif) no-repeat;
+}
+
+.message input:checked:hover:after,
+.message input:checked:focus:after {
+  background-color: darken($lime, 10%);
+}
+
+.message input:checked:focus:after {
+  outline: 5px auto #85bffd;
+}
+
+
+// label
+
+.message label {
+  cursor: pointer;
+  color: $text-color;
+}
+
+
+// content
+
+.message__content {
+  overflow: hidden;
+  height: 0;
+  opacity: .5;
+
+  transition: all .5s ease;
+}
+
+.message input:checked ~ .message__content {
+  height: auto;
+  opacity: 1;
+}
+
+
+// inner
+
+.message__inner {
+  padding: ($space-base * .5) 0 ($space-base * .5) 27px;
+}
